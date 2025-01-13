@@ -1,0 +1,73 @@
+---
+title: "Attention Is All You Need : Le Transformer"
+publishedAt: "2025-01-11"
+image: "/images/blog/transformers.png"
+summary: "Présentation de l'architecture Transformer, un modèle basé uniquement sur les mécanismes d'attention, révolutionnant les modèles de traduction et d'autres tâches de séquence à séquence."
+tag: "Recherche"
+---
+
+L'article **"Attention Is All You Need"**, publié lors de la conférence NIPS 2017, a introduit une innovation majeure dans le domaine des modèles de transduction de séquences : le **Transformer**. Contrairement aux architectures basées sur des réseaux récurrents ou convolutifs, le Transformer repose entièrement sur des mécanismes d'attention, éliminant ainsi la nécessité de convolutions ou de récurrences.
+
+Vous pouvez lire l'article complet [ici](http://arxiv.org/abs/1706.03762).
+
+---
+
+## **Pourquoi le Transformer est-il révolutionnaire ?**
+
+Le Transformer introduit une architecture simplifiée mais puissante, présentant plusieurs avantages par rapport aux modèles traditionnels :
+
+1. **Élimination des séquences computationnelles :**
+   Les modèles récurrents (RNN, LSTM, GRU) souffrent d'une nature séquentielle qui limite leur parallélisme. Le Transformer surmonte cette limitation grâce à une attention globale.
+
+2. **Efficacité accrue :**
+   En exploitant un mécanisme d'attention multi-tête et des couches entièrement connectées, le Transformer est hautement parallélisable, réduisant ainsi le temps d'entraînement.
+
+3. **Performances de pointe :**
+   L'article démontre que le Transformer dépasse les modèles existants en termes de qualité de traduction, atteignant des scores BLEU records avec une fraction des coûts d'entraînement.
+
+---
+
+## **Résumé de l'architecture**
+
+Le Transformer suit une structure classique encodeur-décodeur, mais avec des spécificités clés :
+
+### 1. **Self-Attention**
+Le mécanisme d'auto-attention permet au modèle de pondérer chaque mot d'une séquence en fonction de son importance relative à d'autres mots.
+
+**Formule clé :**
+
+```
+Attention(Q, K, V) = softmax((QK^T) / sqrt(d_k)) V
+```
+
+### 2. **Attention multi-tête**
+Plutôt que de se limiter à une seule attention, le Transformer emploie plusieurs têtes d'attention en parallèle, capturant ainsi différentes relations au sein des données.
+
+### 3. **Encodage positionnel**
+Pour introduire des informations sur l'ordre des mots (en l'absence de récurrence), l'article propose des encodages positionnels basés sur des fonctions sinus et cosinus.
+
+### 4. **Réseaux feed-forward**
+Chaque couche du Transformer inclut des réseaux feed-forward appliqués position par position, avec des activations ReLU.
+
+---
+
+## **Performances**
+
+Les résultats expérimentaux sont impressionnants :
+
+- **Traduction machine :**
+  - Sur la tâche WMT 2014 Anglais-Allemand, le Transformer (modèle grand) atteint un score BLEU de 28.4, surpassant tous les modèles précédents.
+  - Sur la tâche WMT 2014 Anglais-Français, il établit un score BLEU record de 41.8.
+
+- **Analyse syntaxique :**
+  Le Transformer généralise bien à d'autres tâches comme l'analyse syntaxique, surpassant de nombreux modèles concurrents.
+
+---
+
+## **Conclusion et perspectives**
+
+Le Transformer a marqué un tournant dans le domaine de la modélisation de séquences. Avec sa simplicité conceptuelle et ses performances remarquables, il a inspiré de nombreux travaux ultérieurs, notamment les modèles GPT et BERT.
+
+Je vous invite à lire l'article complet [ici](http://arxiv.org/abs/1706.03762) pour découvrir davantage cette architecture révolutionnaire.
+
+---

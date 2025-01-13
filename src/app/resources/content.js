@@ -224,7 +224,7 @@ const blog = {
 }
 
 const work = {
-    label: 'Travail',
+    label: 'Projects',
     title: 'Mes projects',
     description: `une selection de project par ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
