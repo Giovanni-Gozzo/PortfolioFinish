@@ -1,0 +1,75 @@
+---
+title: "Automatisation des Imputations Comptables"
+publishedAt: "2024-12-23"
+summary: "Développement d'un système d'automatisation basé sur des modèles de langage avancés (LLMs) et des techniques d'augmentation de contexte (RAG) pour optimiser les imputations comptables."
+images:
+  - "/images/projects/YOOZ/1.png"
+  - "/images/projects/YOOZ/2.png"
+  - "/images/projects/YOOZ/3.png"
+team:
+  - name: "Giovanni Gozzo"
+    role: "Ingénieur IA"
+    avatar: "/images/team/Giovanni.png"
+    linkedIn: "https://www.linkedin.com/in/giovanni-gozzo/"
+
+---
+
+## Aperçu
+
+Ce projet vise à automatiser l'imputation comptable à partir des factures en exploitant des technologies avancées d'intelligence artificielle, telles que les modèles de langage (LLMs) et les techniques d'augmentation de contexte (RAG). En intégrant ces outils dans l'infrastructure de YOOZ, nous avons amélioré significativement la précision et la rapidité des imputations comptables, tout en personnalisant le système pour répondre aux besoins spécifiques des entreprises.
+
+## Méthodes et Approches Techniques
+
+### 1. Extraction du numéro de compte à partir du contexte
+- **LLMs Utilisés** : Vicuna 13B et Mistral 7B ont été testés avec des prompts explicites.
+- **Amélioration par RAG** : Intégration du Plan Comptable Général (PCG) dans une base de données vectorielle segmentée en chunks.
+- **Résultats** : Vicuna-13B s'est démarqué par sa précision accrue et son faible taux d'hallucinations.
+
+### 2. Extraction de contexte à partir des factures
+- **Source de Données** : Extraction via un OCR interne générant des fichiers XML.
+- **Optimisation des Tokens** : Prétraitement pour éliminer les informations inutiles et réduire la charge cognitive des modèles.
+
+### 3. Gestion des factures multi-comptes
+- **Segmentation Automatisée** : Utilisation d’un outil d’extraction de tableaux pour classer les lignes d’achat (achat, transport, taxe).
+- **Structuration JSON** : Organisation des résultats en JSON après un filtrage par similarité et vérification.
+
+### 4. Adaptation aux contextes d’entreprise
+- **Personnalisation par RAG** : Enrichissement du système avec des plans comptables spécifiques à chaque entreprise.
+- **Amélioration Continue** : Ajustement dynamique des prompts pour des besoins spécifiques.
+
+### 5. Tests et Évaluation
+- **Tests Unitaires** : Implémentés avec PyTest pour comparer les sorties aux attentes.
+- **Tolérance aux Erreurs** : Mise en place d'une tolérance pour des erreurs mineures (par exemple, 607 au lieu de 601).
+
+### 6. Intégration "Speech to Text"
+- **Collaboration Inter-Équipe** : Ajout d'une fonctionnalité de reconnaissance vocale pour convertir les demandes d’achat orales en imputations comptables automatisées.
+
+## Déploiement Technique
+
+- **Backend API** : Développé avec FASTAPI.
+- **Outils Utilisés** : LangChain pour la gestion des LLMs, Chroma pour les embeddings, et Uvicorn pour le déploiement.
+- **Infrastructure** : Système optimisé pour des modèles lourds avec une infrastructure GPU dédiée.
+
+## Défis et Enseignements
+
+### Défis :
+1. Réduction des lenteurs liées aux ressources importantes requises par les LLMs.
+2. Gestion efficace des données multi-contexte pour les factures complexes.
+
+### Enseignements :
+- Importance de la personnalisation par RAG pour améliorer la précision.
+- Nécessité de simplifier les appels aux LLMs pour réduire les coûts et les temps de traitement.
+
+## Résultats
+
+Ce projet a permis de poser les bases d'un système performant et évolutif pour l’automatisation des imputations comptables. Les avancées sur l’intégration des RAG et l’adaptation contextuelle offrent un outil puissant pour les entreprises, tout en démontrant l’impact potentiel de l’IA dans la transformation des processus financiers.
+
+## Perspectives et Améliorations
+
+- **Optimisation des Modèles** : Exploration de modèles plus légers et quantifiés.
+- **Personnalisation Avancée** : Renforcement des fonctionnalités spécifiques à chaque entreprise.
+- **Déploiement à Grande Échelle** : Développement d’un système plus léger pour une adoption élargie.
+
+---
+
+Ce projet met en lumière notre expertise en intelligence artificielle et notre capacité à répondre aux défis complexes du domaine financier, tout en garantissant des solutions durables et personnalisées.
