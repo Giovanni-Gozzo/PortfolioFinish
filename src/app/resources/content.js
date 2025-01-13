@@ -41,7 +41,6 @@ const social = [
     },
     {
         name: 'CV',
-        icon: 'cv',
         link: '/images/CV.pdf'
     }
 ];
