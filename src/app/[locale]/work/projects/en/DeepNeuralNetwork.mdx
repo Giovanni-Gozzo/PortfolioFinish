@@ -1,0 +1,100 @@
+---
+title: "Deep Neural Network"
+publishedAt: "2025-01-22"
+summary: "Conception d'un réseau de neurones profond en utilisant les principes fondamentaux du deep learning, incluant la vectorisation, la backpropagation et la normalisation."
+images:
+  - "/images/projects/DeepLearning/Image deep learning.png.jpg"
+team:
+  - name: "Giovanni Gozzo"
+    role: "Étudiant"
+    avatar: "/images/team/Giovanni.png"
+    linkedIn: "https://www.linkedin.com/in/giovanni-gozzo/"
+
+---
+
+## Aperçu
+
+Ce projet illustre les principes de base de la conception d'un réseau de neurones profond (également appelé Deep Neural Network). Nous partons d'une formule simple décrivant un neurone, pour ensuite introduire des concepts avancés tels que la descente de gradient, la vectorisation, et la backpropagation, tout en abordant des notions clés comme la normalisation et la gestion du sur-apprentissage (overfitting).
+
+## Définitions et Concepts Clés
+
+### 1. Neurone de Base
+
+Un modèle peut contenir des centaines, voire des milliers de neurones. Nous définissons un neurone avec la formule suivante :
+
+\[
+Z = w_1 X_1 + w_2 X_2 + b
+\]
+
+- **Z** : La sortie du neurone.
+- **W** : Les poids (paramètres du modèle).
+- **X** : Les variables d'entrée.
+- **b** : Le biais.
+
+La fonction d'activation appliquée à Z est donnée par :
+
+\[
+A = 1 / (1 + exp(-Z))
+\]
+
+- **A** : Fonction d'activation qui détermine si le neurone s'active ou non.
+
+### 2. Dataset
+
+Les données d'apprentissage sont constituées de :
+- **X** : Les variables d'entrée.
+- **Y** : Les réponses ou labels correspondants.
+
+### 3. Mesure de la Vraisemblance : Fonction Log Loss
+
+La fonction log loss mesure à quel point les prédictions du modèle s'éloignent des valeurs réelles. Elle a une forme hyperbolique et est essentielle pour évaluer les erreurs du modèle.
+
+![Fonction Log Loss](/images/projects/DeepLearning/logloss.png)
+
+### 4. Fonction Coût
+
+La fonction coût quantifie l'écart global entre les prédictions et les valeurs réelles.
+
+![Fonction Coût](/images/projects/DeepLearning/costfunction.png)
+
+### 5. Optimisation : Descente de Gradient
+
+Pour trouver le minimum de la fonction coût, nous utilisons l'algorithme de descente de gradient.
+
+![Descente de Gradient](/images/projects/DeepLearning/gradientdescent.png)
+
+### 6. Vectorisation
+
+La vectorisation permet d'accélérer les calculs et de gérer facilement un grand nombre de paramètres.
+
+![Vectorisation](/images/projects/DeepLearning/vectorization.png)
+
+### 7. Backpropagation
+
+La backpropagation calcule les gradients de la fonction coût et les propage à travers le réseau pour ajuster les poids et les biais. Ce processus est essentiel pour l'apprentissage des réseaux de neurones multicouches.
+
+## Principes Clés en Deep Learning
+
+### Normalisation
+
+Transformer les données pour qu'elles soient dans une plage standardisée améliore la performance, la convergence et la stabilité des algorithmes d'apprentissage.
+
+### Sur-apprentissage (Overfitting)
+
+Un modèle sur-adapté aux données d'entraînement devient moins performant sur les données de test. Des techniques comme la régularisation ou la réduction de la complexité du modèle peuvent aider.
+
+## Type de Réseau : Régression Logistique Profonde
+
+Le réseau conçu ici est une forme de régression logistique profonde. Contrairement aux approches traditionnelles en machine learning, le deep learning permet de déléguer une partie de l'ingénierie des variables (feature engineering) au modèle lui-même.
+
+## Perspectives et Améliorations
+
+- **Ajout de Neurones** : Augmenter le nombre de couches et de neurones pour rendre le modèle plus complexe.
+- **Test de Différents Paramètres** : Passer de relations linéaires à des relations polynomiales.
+- **Optimisation Continue** : Améliorer la normalisation et minimiser les risques de sur-apprentissage.
+
+---
+
+Ce projet met en avant une introduction structurée aux réseaux de neurones et souligne leur potentiel dans l'automatisation et l'apprentissage des relations complexes entre variables.
+
+[Accéder au repository GitHub](https://github.com/Giovanni-Gozzo/DeepLearning)
