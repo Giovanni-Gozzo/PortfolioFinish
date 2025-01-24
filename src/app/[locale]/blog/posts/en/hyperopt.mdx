@@ -1,0 +1,99 @@
+---
+title: "Optimisation des Hyperparamètres avec Hyperopt"
+publishedAt: "2025-01-24"
+summary: "Découvrez comment utiliser Hyperopt pour optimiser efficacement les hyperparamètres des modèles de machine learning en combinant la puissance de l'optimisation bayésienne et des visualisations approfondies."
+tag: "Machine Learning"
+---
+
+## **Introduction**
+
+L'optimisation des hyperparamètres est une étape cruciale dans la création de modèles de machine learning performants. Les deux approches classiques, la **recherche en grille** (*grid search*) et la **recherche aléatoire** (*random search*), ont leurs avantages et inconvénients :
+- La recherche en grille explore méthodiquement tout l'espace de recherche mais est lente.
+- La recherche aléatoire est rapide, mais risque de manquer des zones importantes de l'espace de recherche.
+
+L'article propose une alternative efficace : l'optimisation bayésienne via la bibliothèque Python **Hyperopt**, permettant :
+1. De trouver les meilleurs hyperparamètres pour un modèle donné.
+2. De comparer les modèles en utilisant leurs versions optimales.
+
+Cela garantit une sélection de modèle plus fiable, en s'assurant que les modèles comparés sont optimisés.
+
+---
+
+## **Concepts Clés**
+
+### **1. Fonction Objectif**
+L'optimisation bayésienne repose sur une fonction objectif (`fn`) que l'on cherche à **minimiser** ou à **maximiser**. Par exemple, pour une tâche de classification, la fonction objectif peut être la perte du modèle.
+
+---
+
+### **2. Espace de Recherche**
+L'espace de recherche est défini par des distributions probabilistes :
+- `hp.uniform(label, low, high)` : uniforme sur un intervalle \([low, high]\).
+- `hp.normal(label, mu, sigma)` : distribution normale.
+- `hp.choice(label, options)` : choix parmi une liste d'options.
+
+---
+
+### **3. Algo de Recherche : TPE**
+Hyperopt utilise **Tree-structured Parzen Estimators (TPE)**, un algorithme bayésien qui explore les parties les plus prometteuses de l'espace de recherche en fonction des évaluations passées.
+
+---
+
+## **Visualisation et Analyse avec Hyperopt**
+
+### **1. Trials**
+L'objet `Trials` stocke les résultats de chaque évaluation, incluant :
+- Les paramètres essayés.
+- La valeur de la fonction objectif pour chaque itération.
+
+---
+
+### **2. Visualisation des Résultats**
+Deux visualisations courantes sont :
+1. **Paramètres vs Temps** : pour voir comment les essais évoluent dans le temps.
+2. **Perte vs Paramètres** : pour analyser la corrélation entre les paramètres et la performance.
+
+---
+
+## **Exemple Pratique : Dataset Iris**
+
+### **1. Optimisation pour KNN**
+L'objectif est de trouver le meilleur paramètre `k` pour un classifieur K-Nearest Neighbors.
+
+![knn](/images/blog/hyperopt/knn.png)
+![visuknn](/images/blog/hyperopt/visuknn.webp)
+
+Voici ce que nous obtenons lorsque nous exécutons le code pour la visualisation
+
+
+---
+
+### **2. Étendre aux SVM, Arbres de Décision et Forêts Aléatoires**
+Hyperopt peut optimiser les hyperparamètres de plusieurs modèles :
+
+- **SVM** : paramètres comme `C`, `gamma` et le type de noyau (`kernel`).
+- **Arbres de décision** : profondeur maximale (`max_depth`) et critère (`criterion`).
+- **Forêts aléatoires** : nombre d'estimateurs (`n_estimators`) et caractéristiques maximales (`max_features`).
+
+---
+
+## **Comparaison Globale de Modèles**
+
+Hyperopt permet aussi de comparer plusieurs modèles en définissant un espace de recherche global combinant différents modèles.
+
+---
+
+## **Conclusion**
+
+Hyperopt est un outil puissant pour optimiser les hyperparamètres des modèles de machine learning. Grâce à l'optimisation bayésienne, il permet d'explorer intelligemment l'espace de recherche tout en minimisant le nombre d'évaluations nécessaires. Les points clés incluent :
+
+- **Optimisation avancée** : Hyperopt utilise l'algorithme TPE pour cibler les zones les plus prometteuses de l'espace de recherche.
+- **Flexibilité** : Il prend en charge plusieurs types de distributions pour définir les espaces de recherche (\(hp.uniform\), \(hp.choice\), etc.).
+- **Comparaison globale de modèles** : En combinant plusieurs modèles dans un espace de recherche global, Hyperopt garantit que chaque modèle est comparé dans sa meilleure version optimisée.
+
+L'outil est particulièrement utile pour les scénarios complexes où plusieurs modèles doivent être testés et optimisés, comme les SVM, KNN, arbres de décision ou forêts aléatoires.
+
+### **Pour aller plus loin :**
+- **Documentation officielle** : [Hyperopt](http://hyperopt.github.io/hyperopt/)
+- **Exemples avancés** : Explorez des cas d'utilisation spécifiques comme la sélection de modèles dans des environnements réels.
+- **Applications hors machine learning** : Hyperopt peut également être utilisé pour optimiser des paramètres dans d'autres domaines, comme les simulations ou les algorithmes heuristiques.

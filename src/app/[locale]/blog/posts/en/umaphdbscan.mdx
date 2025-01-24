@@ -1,0 +1,92 @@
+---
+title: "Clustering d'Embeddings de Phrases pour Identifier les Intentions dans des Textes Courts"
+publishedAt: "2025-01-24"
+summary: "Une approche combinant UMAP et HDBSCAN pour détecter automatiquement les intentions dans des textes courts, sans avoir besoin de données étiquetées."
+tag: "Science des données"
+---
+
+## **Introduction**
+
+L'analyse des dialogues utilisateurs peut offrir des insights précieux pour améliorer les produits et services. Comprendre les intentions (« intents ») émanant de ces interactions est essentiel, mais repose souvent sur des données étiquetées, difficiles à obtenir. Cet article propose une méthode pour identifier ces intentions de manière automatique, en combinant des embeddings de phrases, UMAP pour la réduction de dimensionnalité, et HDBSCAN pour le clustering.
+
+---
+
+## **Pourquoi ne pas utiliser la modélisation thématique ?**
+
+### Limitations de LDA (Latent Dirichlet Allocation) :
+- LDA dépend du choix du nombre de thématiques, un hyperparamètre difficile à définir sans étiquettes.
+- Les messages courts sont mal traités par l’approche « bag of words », qui ignore l'ordre et le contexte des mots.
+- Les intentions sont souvent plus nuancées que les thématiques, rendant LDA peu efficace.
+
+---
+
+## **Pipeline Proposé**
+
+### **1. Représentations numériques : les Sentence Embeddings**
+Les embeddings transforment les phrases en vecteurs qui capturent leur signification sémantique.
+
+- **Modèles utilisés :**
+  - Universal Sentence Encoder (USE).
+  - Sentence-BERT (modèles pré-entraînés comme `all-mpnet-base-v2`, `all-MiniLM-L6-v2`, etc.).
+
+Ces embeddings permettent de résumer chaque message sous forme de vecteurs de haute dimension (>500 dimensions).
+
+L'article date de quelques années aujourd'hui il est préferable d'utiliser des modèles de plus récents comme `e5-large` ou `all-MiniLM-L6-v2`.
+
+---
+
+### **2. Réduction de dimensionnalité avec UMAP**
+UMAP est utilisé pour projeter les vecteurs dans un espace de dimension réduite tout en conservant leur structure globale.
+
+- **Hyperparamètres clés :**
+  - `n_neighbors` : taille du voisinage considéré pour la structure locale.
+  - `n_components` : nombre de dimensions finales.
+
+---
+
+### **3. Clustering avec HDBSCAN**
+HDBSCAN identifie des clusters sans préciser leur nombre à l'avance et gère le bruit (données non assignables).
+
+- **Hyperparamètres clés :**
+  - `min_cluster_size` : taille minimale d'un cluster.
+  - `min_samples` : robustesse face au bruit.
+
+---
+
+### **4. Tuning des hyperparamètres**
+Le pipeline combine UMAP et HDBSCAN, mais les résultats dépendent fortement des hyperparamètres choisis.
+
+- **Fonction de coût :**
+  - Minimiser le pourcentage de points avec une probabilité d'appartenance < 5%.
+  - Contraindre le nombre de clusters à une plage raisonnable (30-100 pour cet exemple a adapté en fonction de votre Dataset).
+
+- **Méthodes d'optimisation :**
+  - Recherche aléatoire.
+  - Optimisation bayésienne ([Hyperopt](https://portfolio-finish.vercel.app/blog/hyperopt)) pour explorer efficacement l'espace des hyperparamètres.
+
+---
+
+## **Résultats de cet article**
+
+- **Métriques d’évaluation :**
+  - Adjusted Rand Index (ARI).
+  - Normalized Mutual Information (NMI).
+
+- **Meilleur modèle :**
+  - Sentence-BERT `all-mpnet-base-v2`, avec ARI = 0.46 et NMI = 0.81.
+
+---
+
+## **Génération Automatique de Labels**
+
+Pour rendre les clusters exploitables, des labels descriptifs sont générés automatiquement :
+- Utilisation de spaCy pour extraire des paires verbe-objet et des mots-clés.
+- Exemple : un cluster sur « expiration de carte » peut être labellisé par les mots-clés « carte-expire ».
+
+---
+
+## **Conclusion**
+
+La méthode combinant UMAP, HDBSCAN et des embeddings pré-entraînés offre une solution puissante pour détecter automatiquement les intentions dans des textes courts, sans besoin de données étiquetées. En utilisant des outils comme Hyperopt pour optimiser les hyperparamètres et spaCy pour enrichir les résultats, cette approche permet de simplifier et d'accélérer l'analyse des dialogues utilisateurs.
+
+Pour plus de détails, consultez l'article original : [Towards Data Science](https://towardsdatascience.com/clustering-sentence-embeddings-to-identify-intents-in-short-text-48d22d3bf02e).
