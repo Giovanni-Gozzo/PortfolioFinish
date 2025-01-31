@@ -1,4 +1,5 @@
 import React from 'react';
+ import { Analytics } from "@vercel/analytics/react"
 
 import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
@@ -49,6 +50,7 @@ export default function Home(
 	const t = useTranslations();
 	const { home, about, person, newsletter } = renderContent(t);
 	return (
+
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
 			direction="column" alignItems="center">
@@ -74,6 +76,7 @@ export default function Home(
 					}),
 				}}
 			/>
+			<Analytics />
 			<Flex
 				fillWidth
 				direction="column"
