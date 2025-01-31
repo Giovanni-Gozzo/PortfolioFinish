@@ -1,0 +1,105 @@
+---
+title: "Model2Vec : Une approche rapide et efficace pour les embeddings de phrases"
+publishedAt: "2025-01-31"
+summary: "Model2Vec permet de distiller un modèle statique à partir de n'importe quel Sentence Transformer, le rendant 500x plus rapide et 15x plus petit."
+tag: "Science des données"
+---
+
+## **Introduction**
+
+Les modèles de langage (Sentence Transformers) sont devenus des standards pour l'extraction de caractéristiques textuelles. Cependant, ils sont souvent lourds en ressources computationnelles et énergétiques.
+
+**Model2Vec** propose une solution : distiller un modèle statique à partir d’un Sentence Transformer pour obtenir des embeddings rapides et légers, sans sacrifier la performance.
+
+🔗 **Pour plus de détails, consultez l'article original :** [Model2Vec sur HuggingFace](https://huggingface.co/blog/Pringled/model2vec)
+
+---
+
+## **Qu'est-ce que Model2Vec ?**
+
+Model2Vec est une technique qui permet de distiller un modèle statique rapide et performant à partir de n'importe quel Sentence Transformer. Son fonctionnement repose sur trois étapes principales :
+
+1. **Encodage du vocabulaire** : Passage d’un vocabulaire à travers un modèle Sentence Transformer pour générer des embeddings.
+2. **Réduction de dimensionnalité avec PCA** : Compression des embeddings tout en améliorant leur qualité.
+3. **Pondération Zipf** : Ajustement des poids des tokens pour compenser l'absence de contexte.
+
+Contrairement aux Sentence Transformers classiques, Model2Vec génère des embeddings statiques, ce qui le rend extrêmement rapide et adapté aux contraintes de calcul.
+
+---
+
+## **Fonctionnement de Model2Vec**
+
+### **1. Encodage avec Sentence Transformers**
+
+Lorsqu’un Sentence Transformer encode une phrase, il divise celle-ci en sous-mots (*tokens*), applique un mécanisme d'attention et produit des embeddings contextuels. Model2Vec adopte une approche différente :
+
+- Il génère et stocke les embeddings de tous les tokens du vocabulaire du modèle Sentence Transformer.
+- Lors de l’inférence, il utilise simplement la moyenne des embeddings des tokens présents dans la phrase.
+
+### **2. Réduction de dimensionnalité avec PCA**
+
+La réduction de dimensionnalité via **l’Analyse en Composantes Principales (PCA)** permet d’éliminer le bruit dans les vecteurs et de normaliser l’espace des embeddings. Fait surprenant : cette réduction améliore même la performance du modèle.
+
+### **3. Pondération Zipf**
+
+En absence d'un mécanisme d'attention pour pondérer les tokens, Model2Vec applique **la loi de Zipf**, qui estime la fréquence relative des mots en fonction de leur classement dans un corpus. Cela permet de diminuer l’influence des mots les plus fréquents sans nécessiter de corpus externe.
+
+---
+
+## **Pourquoi utiliser Model2Vec ?**
+
+- **Extrêmement rapide** : Génère des embeddings **500x plus vite** qu’un Sentence Transformer standard.
+- **Faible empreinte mémoire** : **15x plus petit** qu’un modèle classique.
+- **Facile à intégrer** : Compatible avec les pipelines NLP comme Sentence Transformers, LangChain ou LlamaIndex.
+- **Idéal pour les contraintes computationnelles** : Fonctionne sur CPU avec un temps d'inférence quasi-instantané.
+
+---
+
+## **Utilisation de Model2Vec**
+
+### **Installation**
+```bash
+pip install model2vec
+```
+
+### **Inférence avec un modèle pré-entraîné**
+```python
+from model2vec import StaticModel
+
+# Charger un modèle pré-entraîné depuis HuggingFace
+model = StaticModel.from_pretrained("minishlab/M2V_base_output")
+
+# Générer des embeddings
+embeddings = model.encode(["C'est un secret pour tout le monde."])
+```
+
+### **Distillation d’un nouveau modèle**
+```python
+from model2vec import distill
+
+# Choisir un modèle Sentence Transformer de base
+base_model_name = "BAAI/bge-base-en-v1.5"
+
+# Distiller un modèle avec réduction dimensionnelle PCA
+model = distill(model_name=base_model_name, pca_dims=256)
+
+# Générer des embeddings
+embeddings = model.encode(["Un ennemi redoutable a envahi Hyrule !"])
+```
+
+### **Personnalisation du vocabulaire**
+```python
+# Ajouter des mots spécifiques au vocabulaire
+vocabulary = ["ganondorf", "hyrule", "triforce"]
+model = distill(model_name=base_model_name, vocabulary=vocabulary, pca_dims=256)
+```
+
+---
+
+## **Conclusion**
+
+**Model2Vec est une alternative efficace et rapide aux Sentence Transformers**, idéale pour les applications nécessitant des embeddings ultra-rapides avec peu de ressources.
+
+Grâce à son approche innovante combinant **PCA et pondération Zipf**, il offre un excellent compromis entre **vitesse, précision et taille**. Que ce soit pour la **classification de texte, le clustering, la recherche d’information ou l’indexation sémantique**, Model2Vec constitue une solution de choix pour optimiser les performances sans sacrifier la qualité des représentations textuelles.
+
+🔗 **Pour plus de détails, consultez l'article original :** [Model2Vec sur HuggingFace](https://huggingface.co/blog/Pringled/model2vec)
