@@ -11,6 +11,7 @@ interface PostProps {
 
 export default function Post({ post, thumbnail }: PostProps) {
     return (
+
         <SmartLink
             className={styles.hover}
             style={{

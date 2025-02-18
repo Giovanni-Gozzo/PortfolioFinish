@@ -217,7 +217,7 @@ const about = {
 
 const blog = {
     label: 'News',
-    title: 'Écriture sur les news ...',
+    title: 'Cette page me permet de résumer des articles pour mieux m\'en approprier les concepts et les retrouver rapidement.',
     description: `Lisez ce que ${person.name} a fait récemment`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route

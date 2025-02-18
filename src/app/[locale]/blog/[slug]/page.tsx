@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl';
 import { formatDate } from '@/app/utils/formatDate'
 
 interface BlogParams {
-    params: { 
+    params: {
         slug: string;
 		locale: string;
     };
@@ -19,7 +19,7 @@ interface BlogParams {
 
 export async function generateStaticParams() {
 	const locales = routing.locales;
-    
+
     // Create an array to store all posts from all locales
     const allPosts: { slug: string; locale: string }[] = [];
 
@@ -88,6 +88,7 @@ export default function Blog({ params }: BlogParams) {
 	const { person } = renderContent(t);
 
 	return (
+
 		<Flex as="section"
 			fillWidth maxWidth="xs"
 			direction="column"
@@ -146,6 +147,7 @@ export default function Blog({ params }: BlogParams) {
 				<CustomMDX source={post.content} />
 			</Flex>
 			<ScrollToHash />
+
 		</Flex>
 	)
 }
