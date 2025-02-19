@@ -1,0 +1,120 @@
+---
+title: "AlphaFold : La Révolution du Repliement des Protéines"
+publishedAt: "2025-02-19"
+summary: "Depuis plus de 50 ans, le problème du repliement des protéines intrigue la communauté scientifique. La percée réalisée par DeepMind (filiale de Google) avec AlphaFold représente un exploit majeur qui aura un impact considérable dans le domaine de la biologie et de la médecine."
+tag: "Biologie"
+---
+
+AlphaFold : La Révolution du Repliement des Protéines
+Depuis plus de 50 ans, le problème du repliement des protéines intrigue la communauté scientifique. La percée réalisée par DeepMind (filiale de Google) avec AlphaFold représente un exploit majeur qui aura un impact considérable dans le domaine de la biologie et de la médecine.
+
+## Les Protéines et Leur Importance en Biologie
+
+Les protéines sont une classe de molécules essentielles au fonctionnement de l’organisme vivant. Chez l’être humain, on compte des dizaines de milliers de protéines, et au total, plus de 200 millions dans le règne animal. Lorsque nous consommons des protéines, elles sont décomposées pour ensuite être réassemblées afin de créer nos propres protéines. Ces molécules sont construites à partir d’acides aminés. Le vivant utilise 21 types d’acides aminés qui permettent de construire toutes les protéines.
+
+Chaque acide aminé possède :
+- Un atome de carbone central.
+- Quatre liaisons :
+  - Une liaison avec un atome d'hydrogène (H),
+  - Une liaison avec un groupe amine (NH₂),
+  - Une liaison avec un groupe acide carboxylique (COOH),
+  - Et une liaison avec une chaîne latérale (ou radicale) variable, qui détermine les propriétés spécifiques de l’acide aminé.
+
+![atomeam](/images/blog/alphafold/1.png)
+
+Les acides aminés sont souvent représentés par une lettre unique, ce qui facilite leur désignation.
+
+![acidesam](/images/blog/alphafold/2.png)
+
+Une protéine se définit donc comme une longue chaîne d’acides aminés. Pour la décrire, il suffit de donner la séquence des acides aminés. Par exemple, une protéine très petite du virus COVID-19 est composée de 111 acides aminés et totalise plus de 2000 atomes.
+La cellule dispose de l’information nécessaire à la construction des protéines grâce à l’ADN, qui stocke le « schéma » sous forme de séquences d’acides aminés.
+
+## Fonctionnement des Protéines et Leur Repliement
+
+Une fois constituée, la chaîne d’acides aminés se replie spontanément sur elle-même. La forme adoptée par une protéine est cruciale, car c’est cette structure qui détermine sa fonction. Par exemple, les anticorps ont une forme en « Y » qui leur permet de se lier aux agents pathogènes, et de nombreux récepteurs adoptent une configuration semblable à une serrure, activée par l’insertion d’une « clé » complémentaire.
+De nombreux médicaments et drogues exploitent ces principes, et certaines maladies (comme Alzheimer ou Parkinson) sont associées à des repliements anormaux de protéines.
+
+La base de données UniProt recense actuellement les séquences de 200 millions de protéines différentes, avec une augmentation d’environ 30 millions chaque année. Le défi réside dans la détermination des structures 3D des protéines, car il ne suffit pas de « les regarder » sous un microscope. Pour déterminer leur forme, des techniques complexes telles que la cristallographie aux rayons X sont utilisées. Cette méthode nécessite une quantité suffisante de protéine isolée et purifiée, une cristallisation laborieuse, puis l'analyse de figures de diffraction qui, par des calculs mathématiques, permettent de reconstituer la structure 3D avec une grande précision. Certaines protéines, notamment celles intégrées dans des membranes, sont particulièrement difficiles à cristalliser.
+
+Idéalement, il serait souhaitable de prédire la forme d’une protéine directement à partir de sa séquence. Ce problème, longtemps considéré comme insurmontable par l’humain, repose sur le fait que la protéine, lors de sa formation, ne possède pas une forme déterminée dès le départ. Ce sont les interactions entre les acides aminés – certaines s’attirent, d’autres se repoussent – qui induisent un repliement vers une configuration où l’énergie totale est minimisée. Comme l’a montré le biochimiste Levinthal, le nombre de configurations possibles est astronomique (10^143 possibilités), ce qui rend une recherche exhaustive impossible.
+
+## Historique et Évolution des Méthodes de Prédiction
+
+Ce problème de prédiction du repliement des protéines a été évoqué dès 1972. Des méthodes comme Rosetta ont connu des succès notables dans les années 2000. Des compétitions biannuelles, évaluées par le score GDT (Global Distance Test), permettent de comparer la distance et le bon positionnement des acides aminés dans les structures prédites par différents algorithmes. Dans la catégorie dite "free modeling" (où aucune information sur la structure n’est disponible), les résultats étaient historiquement autour de 40 GDT. En 2018, une équipe a réalisé un bond avec un score de 60 GDT, dominant ses concurrents, et en 2020, DeepMind a atteint un score de 87 GDT avec AlphaFold. La version AlphaFold2, dévoilée en 2020, a ainsi établi de nouveaux standards en prédiction protéique.
+
+DeepMind, une startup londonienne fondée par le neuroscientifique Demis Hassabis, a utilisé des méthodes de deep learning. Alors que la moitié des groupes utilisait déjà des techniques de deep learning (DeepMind ayant publié son code en open source en 2018 pour favoriser la recherche), AlphaFold2 a rapidement atteint des performances impressionnantes : un score moyen de 92,4 GDT et une erreur de distance moyenne de 1,6 Ångström (à peine supérieure à la taille d’un atome). Un score GDT supérieur à 90 est considéré comme équivalent à la précision de la cristallographie aux rayons X.
+
+## Fonctionnement d’AlphaFold : Du Deep Learning à la Diffusion
+
+Dans un monde idéal, il serait souhaitable de prédire immédiatement la forme 3D d’une protéine à partir de sa séquence d’acides aminés via un réseau de neurones. En pratique, il faut d’abord enrichir le dataset en intégrant les relations entre acides aminés ainsi que les structures connues de certaines protéines. Une étape de recherche de séquences similaires est également effectuée, même si la structure n’est pas connue, pour identifier les acides aminés essentiels à la fonction.
+
+### AlphaFold1 et AlphaFold2
+
+AlphaFold1 utilisait des CNN (réseaux de neurones convolutifs) pour la reconnaissance d’images.
+AlphaFold2 fait appel aux transformers et obtient des performances remarquables.
+Cependant, AlphaFold2 n’est pas infaillible : certaines protéines présentent encore des scores faibles (par exemple, des GDT autour de 44). De plus, même si la structure d’une protéine est prédite avec précision, d’autres facteurs comme les interactions avec le pH ou d’autres molécules peuvent influencer son comportement.
+
+### AlphaFold3 : Une Nouvelle Ère
+
+Le 8 mai 2024, AlphaFold3 est sorti. Cette nouvelle version ne se contente pas de prédire le repliement d’une protéine isolée, mais peut également examiner des combinaisons ou des complexes de protéines, ainsi que l’ADN, l’ARN et les ligands. Cette avancée pourrait permettre, par exemple, de compléter certaines structures protéiques et de faciliter la conception de nouveaux médicaments.
+
+AlphaFold3 se distingue également par sa simplicité et sa puissance accrue. Alors qu’AlphaFold2 générait des matrices d’angles et de distances pour reconstituer la structure 3D, AlphaFold3 prédit directement les coordonnées des atomes, ce qui s’avère à la fois plus simple et plus précis. Cette prouesse est rendue possible grâce à l’utilisation de modèles de diffusion – une technique également employée par des IA telles que MidJourney – qui crée des cadres généralisés plutôt que de traiter chaque cas particulier séparément. Par ailleurs, les modèles multimodaux utilisés dans AlphaFold3 permettent de combiner informations textuelles et visuelles, améliorant ainsi la compréhension globale des protéines.
+
+![alphafold3](/images/blog/alphafold/3.png)
+
+## Les Mécanismes Internes d’AlphaFold3
+
+### Rôle des MSA et de la Représentation par Paires
+
+Dans AlphaFold2, deux objets distincts véhiculent l’information sur la protéine :
+- **MSA (Multiple Sequence Alignment)** : permet de trouver des protéines ayant des fonctions similaires et d’identifier les acides aminés essentiels.
+- **Représentation par paires** : encode les interactions entre chaque paire d’acides aminés en termes de distances et d’angles.
+
+Dans AlphaFold3, le rôle de la MSA est réduit. Celle-ci aide principalement à guider la représentation par paires, en servant d’« aide-mémoire » pour déterminer l’importance relative des interactions entre les acides aminés. Les ligands, qui ne disposent pas d’une séquence similaire à celle des protéines, sont traités uniquement via la représentation par paires.
+
+### Les Trois Grandes Parties de l’Algorithme
+
+L’algorithme complet d’AlphaFold3 se divise en trois parties :
+
+#### Première Partie – Input et Embedding :
+
+- **Identification des tokens** : L’entrée peut comporter plusieurs entités (protéines, ADN, ARN, ligands). Chaque token est identifié pour déterminer à quelle chaîne ou type il appartient.
+- **Conformer Generation** : Détermine une position standard pour chaque token, basée sur la comparaison avec des séquences déjà connues. La position est déterminée à partir d’un point de référence avec une rotation initiale aléatoire (qui sera ultérieurement corrigée).
+- **Genetic Search** : Recherche l’historique génétique de la protéine.
+- **Template Search** : Recherche des séquences similaires ayant des structures connues. Pour être utilisée, la similarité doit être supérieure à 10 % et, au maximum, 4 protéines similaires seront retenues. Cette étape fournit une hypothèse de départ essentielle.
+
+Ensuite, sont créés deux types d’embeddings :
+- **Single Embedding (Si)** : Encode les informations propres à chaque token (par exemple, type de token, chaîne à laquelle il appartient, position de référence, etc.).
+- **Pair Embedding (Zij)** : Encode les informations concernant les interactions entre paires de tokens (par exemple, liaisons entre acides aminés, interactions ligand-polymère ou ligand-ligand).
+
+Le Pair Embedding est créé à partir d’une copie des Single Embeddings de tokens i et j, transformée par une opération linéaire sans biais (LinearNoBias), dont les poids sont appris pour optimiser le modèle.
+
+#### Deuxième Partie – Module Principal (Pairformer) :
+
+![pairformer](/images/blog/alphafold/4.png)
+
+Ce module intègre les informations provenant des templates, du MSA et de la représentation par paires (pairformer).
+Le pairformer est le module principal de l’algorithme, axé sur la représentation par paires. Il comporte quatre blocs symétriques (deux pour chaque sens, afin de traiter les relations de manière réciproque entre token i et token j) appelés « blocs triangle ». Ces blocs analysent l’influence des autres tokens sur la paire considérée.
+Le Single Representation est également mis à jour grâce aux informations extraites du Pair Representation. Ainsi, la Single Representation d’un token est ajustée par une matrice provenant de la Pair Representation pour refléter la relation avec les autres tokens, tandis que l’inverse n’est pas vrai.
+
+- **Module Template** : Basé sur le pairformer, il utilise les structures obtenues lors de la recherche génétique pour mettre à jour la représentation par paires (Vij). Après mise à jour, ces informations sont moyennées et intégrées dans Zij.
+- **Module MSA** : Contrairement à AlphaFold2, ce module est plus léger dans AlphaFold3. Il se contente de calculer la moyenne des acides aminés pour chaque position afin d’aider à déterminer la force des interactions entre les acides aminés au sein de la protéine.
+
+#### Troisième Partie – Module de Diffusion :
+
+Ce module permet d’affiner la prédiction en partant d’une description des positions atomiques bruitées. L’objectif est d’entraîner le modèle pour qu’il soit capable, à partir d’un arrangement aléatoire, de retrouver la structure exacte des molécules.
+La description de chaque atome (incluant les fonctionnalités initiales ainsi que les informations des représentations par paires et par tokens) est traitée en parallèle d’un ensemble de points aléatoires.
+
+Le module de diffusion utilise un nouveau transformer comportant deux entrées :
+- La première, désignée « ps », contient la description détaillée (en bleu dans les schémas).
+- La deuxième, en rouge, correspond aux points complètement aléatoires.
+
+Un prétraitement est effectué sur la description, et des systèmes aléatoires de rotation et de translation sont appliqués pour garantir l’invariance du modèle par rapport aux rotations et translations.
+Ensuite, deux mécanismes d’attention sont appliqués :
+- **Atom Level Attention** : Si deux atomes sont trop éloignés, ils n’influencent pas la paire.
+- **Token Level Attention** : Effectue une attention globale sur la paire, quels que soient les écarts.
+
+Ainsi, au fur et à mesure du processus de diffusion, le modèle « débruite » la description et parvient à placer correctement les atomes pour reconstruire la structure 3D de la molécule.
+
+Cet article détaille en profondeur le fonctionnement d’AlphaFold, depuis la description initiale des protéines jusqu’à l’algorithme de diffusion intégré dans AlphaFold3. Chaque étape, de l’input des séquences à la construction finale des structures via diffusion, est essentielle pour atteindre une prédiction d’une précision équivalente à celle obtenue par la cristallographie aux rayons X.
+Cet exploit, rendu possible grâce à l’utilisation de techniques de deep learning avancées et de modèles de diffusion, ouvre de nouvelles perspectives en biologie structurale et dans la conception de médicaments. AlphaFold3, en intégrant également l’ADN, l’ARN et les ligands, promet de transformer notre compréhension des interactions moléculaires et de favoriser des avancées majeures dans la recherche biomédicale.
