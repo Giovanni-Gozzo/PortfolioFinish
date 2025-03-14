@@ -39,98 +39,98 @@ const projects = [
         ce: ["CE1.01", "CE1.03", "CE1.06"],
         level: "Professionnel",
         justification:
-          "Vous avez sélectionné une architecture logicielle adaptée aux besoins des utilisateurs, en appliquant des principes algorithmiques efficaces et en choisissant des technologies appropriées pour assurer la performance et la scalabilité de la plateforme.",
+          "J'ai sélectionné une architecture logicielle adaptée aux besoins des utilisateurs, en appliquant des principes algorithmiques efficaces et en choisissant des technologies appropriées pour assurer la performance et la scalabilité de la plateforme.",
       },
       {
         ac: "AC 31.03",
         ce: ["CE1.01", "CE1.06", "CE3.01"],
         level: "Professionnel",
         justification:
-          "Vous avez déployé la plateforme dans un environnement de production, configuré les services nécessaires et assuré leur bon fonctionnement pour offrir une expérience utilisateur optimale.",
+          "J'ai déployé la plateforme dans un environnement de production, configuré les services nécessaires et assuré leur bon fonctionnement pour offrir une expérience utilisateur optimale.",
       },
       {
         ac: "AC 32.01",
         ce: ["CE2.01", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez optimisé la plateforme en tenant compte des performances, de la consommation de ressources et de la capacité à gérer une augmentation du nombre d'utilisateurs, en justifiant vos choix techniques.",
+          "J'ai optimisé la plateforme en tenant compte des performances, de la consommation de ressources et de la capacité à gérer une augmentation du nombre d'utilisateurs, en justifiant mes choix techniques.",
       },
       {
         ac: "AC 32.02",
         ce: ["CE2.02", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé le code de la plateforme pour identifier les points d'amélioration, modélisé des solutions optimisées et validé leur efficacité.",
+          "J'ai analysé le code de la plateforme pour identifier les points d'amélioration, modélisé des solutions optimisées et validé leur efficacité.",
       },
       {
         ac: "AC 33.01",
         ce: ["CE3.01", "CE3.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus d'intégration et de déploiement continus pour automatiser les mises à jour de la plateforme, assurant ainsi sa disponibilité et sa fiabilité.",
+          "J'ai mis en place des processus d'intégration et de déploiement continus pour automatiser les mises à jour de la plateforme, assurant ainsi sa disponibilité et sa fiabilité.",
       },
       {
         ac: "AC 33.03",
         ce: ["CE3.02", "CE3.03"],
         level: "Professionnel",
         justification:
-          "Vous avez implémenté des mesures de sécurité conformes aux normes pour protéger les données des utilisateurs et assurer l'intégrité de la plateforme.",
+          "J'ai implémenté des mesures de sécurité conformes aux normes pour protéger les données des utilisateurs et assurer l'intégrité de la plateforme.",
       },
       {
         ac: "AC 34.01",
         ce: ["CE4.01", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez conçu des bases de données capables de gérer efficacement des volumes importants de données variées, tout en garantissant leur qualité et leur cohérence.",
+          "J'ai conçu des bases de données capables de gérer efficacement des volumes importants de données variées, tout en garantissant leur qualité et leur cohérence.",
       },
       {
         ac: "AC 34.02",
         ce: ["CE4.02", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus pour préparer et extraire les données en conformité avec les réglementations sur la protection des données personnelles, assurant leur qualité pour une exploitation efficace.",
+          "J'ai mis en place des processus pour préparer et extraire les données en conformité avec les réglementations sur la protection des données personnelles, assurant leur qualité pour une exploitation efficace.",
       },
       {
         ac: "AC 35.01",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez évalué les implications économiques, sociales et technologiques de la plateforme, en veillant à une gestion éthique et responsable du projet.",
+          "J'ai évalué les implications économiques, sociales et technologiques de la plateforme, en veillant à une gestion éthique et responsable du projet.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place une veille technologique pour suivre les évolutions pertinentes et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
+          "J'ai mis en place une veille technologique pour suivre les évolutions pertinentes et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
       },
       {
         ac: "AC 36.04",
         ce: ["CE5.01", "CE5.04"],
         level: "Professionnel",
         justification:
-          "Vous avez participé activement à la gestion du projet de la plateforme, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
+          "J'ai participé activement à la gestion du projet de la plateforme, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
       },
       {
         ac: "AC 36.03",
         ce: ["CE6.02", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez facilité l'adoption de la nouvelle plateforme par les utilisateurs et les parties prenantes, en assurant une transition en douceur et en communiquant clairement les avantages et les changements apportés.",
+          "J'ai facilité l'adoption de la nouvelle plateforme par les utilisateurs et les parties prenantes, en assurant une transition en douceur et en communiquant clairement les avantages et les changements apportés.",
       },
       {
         ac: "AC 36.02",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé les tendances actuelles de l'innovation numérique et identifié les opportunités pour améliorer la plateforme, tout en veillant à respecter les normes légales et éthiques.",
+          "J'ai analysé les tendances actuelles de l'innovation numérique et identifié les opportunités pour améliorer la plateforme, tout en veillant à respecter les normes légales et éthiques.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place une veille technologique pour suivre les évolutions pertinentes et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
+          "J'ai mis en place une veille technologique pour suivre les évolutions pertinentes et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
       },
     ],
   },
@@ -144,98 +144,98 @@ const projects = [
         ce: ["CE1.01", "CE1.06"],
         level: "Professionnel",
         justification:
-          "Vous avez conçu une architecture logicielle adaptée pour automatiser l'imputation comptable, en tenant compte des besoins spécifiques du client et en sélectionnant les technologies appropriées pour assurer l'efficacité et la fiabilité du système.",
+          "J'ai conçu une architecture logicielle adaptée pour automatiser l'imputation comptable, en tenant compte des besoins spécifiques du client et en sélectionnant les technologies appropriées pour assurer l'efficacité et la fiabilité du système.",
       },
       {
         ac: "AC 31.03",
         ce: ["CE1.01", "CE3.01"],
         level: "Professionnel",
         justification:
-          "Vous avez déployé la solution d'automatisation dans l'environnement de production du client, en assurant une intégration fluide avec les systèmes existants et en garantissant la continuité des opérations comptables.",
+          "J'ai déployé la solution d'automatisation dans l'environnement de production du client, en assurant une intégration fluide avec les systèmes existants et en garantissant la continuité des opérations comptables.",
       },
       {
         ac: "AC 32.01",
         ce: ["CE2.01", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez optimisé l'application pour assurer un traitement rapide et précis des opérations comptables, en minimisant l'utilisation des ressources et en justifiant vos choix techniques pour répondre aux exigences de performance.",
+          "J'ai optimisé l'application pour assurer un traitement rapide et précis des opérations comptables, en minimisant l'utilisation des ressources et en justifiant mes choix techniques pour répondre aux exigences de performance.",
       },
       {
         ac: "AC 32.02",
         ce: ["CE2.02", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé le code existant pour identifier les inefficacités, modélisé des solutions améliorées et validé les améliorations apportées pour optimiser le processus d'imputation comptable.",
+          "J'ai analysé le code existant pour identifier les inefficacités, modélisé des solutions améliorées et validé les améliorations apportées pour optimiser le processus d'imputation comptable.",
       },
       {
         ac: "AC 33.01",
         ce: ["CE3.01", "CE3.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus automatisés pour le traitement des opérations comptables, garantissant une gestion efficace et une continuité des activités sans interruption.",
+          "J'ai mis en place des processus automatisés pour le traitement des opérations comptables, garantissant une gestion efficace et une continuité des activités sans interruption.",
       },
       {
         ac: "AC 33.03",
         ce: ["CE3.02", "CE3.03"],
         level: "Professionnel",
         justification:
-          "Vous avez implémenté des mesures de sécurité conformes aux normes pour protéger les données comptables sensibles et assurer l'intégrité du système d'information.",
+          "J'ai implémenté des mesures de sécurité conformes aux normes pour protéger les données comptables sensibles et assurer l'intégrité du système d'information.",
       },
       {
         ac: "AC 34.01",
         ce: ["CE4.01", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez développé des mécanismes pour capturer et stocker efficacement des volumes importants de données comptables, en veillant à leur cohérence et à leur qualité pour une exploitation fiable.",
+          "J'ai développé des mécanismes pour capturer et stocker efficacement des volumes importants de données comptables, en veillant à leur cohérence et à leur qualité pour une exploitation fiable.",
       },
       {
         ac: "AC 34.02",
         ce: ["CE4.02", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus pour préparer et extraire les données comptables en conformité avec les réglementations sur la protection des données personnelles, garantissant leur qualité pour une exploitation efficace.",
+          "J'ai mis en place des processus pour préparer et extraire les données comptables en conformité avec les réglementations sur la protection des données personnelles, garantissant leur qualité pour une exploitation efficace.",
       },
       {
         ac: "AC 35.01",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez évalué les implications économiques, sociales et technologiques de l'automatisation de l'imputation comptable, en veillant à une gestion éthique et responsable du projet.",
+          "J'ai évalué les implications économiques, sociales et technologiques de l'automatisation de l'imputation comptable, en veillant à une gestion éthique et responsable du projet.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine de l'automatisation comptable et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
+          "J'ai mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine de l'automatisation comptable et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
       },
       {
         ac: "AC 36.04",
         ce: ["CE5.01", "CE5.04"],
         level: "Professionnel",
         justification:
-          "Vous avez participé activement à la gestion du projet d'automatisation de l'imputation comptable, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
+          "J'ai participé activement à la gestion du projet d'automatisation de l'imputation comptable, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
       },
       {
         ac: "AC 36.03",
         ce: ["CE6.02", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez facilité l'adoption de la nouvelle solution automatisée par les utilisateurs et les parties prenantes, en assurant une transition en douceur et en communiquant clairement les avantages et les changements apportés.",
+          "J'ai facilité l'adoption de la nouvelle solution automatisée par les utilisateurs et les parties prenantes, en assurant une transition en douceur et en communiquant clairement les avantages et les changements apportés.",
       },
       {
         ac: "AC 36.02",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé les tendances actuelles de l'innovation numérique dans le domaine comptable et identifié les opportunités pour améliorer la solution, tout en veillant à respecter les normes légales et éthiques.",
+          "J'ai analysé les tendances actuelles de l'innovation numérique dans le domaine comptable et identifié les opportunités pour améliorer la solution, tout en veillant à respecter les normes légales et éthiques.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine de l'automatisation comptable et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
+          "J'ai mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine de l'automatisation comptable et partagé ces informations avec l'équipe, favorisant une culture d'innovation et de collaboration.",
       },
     ],
   },
@@ -250,70 +250,70 @@ const projects = [
         ce: ["CE1.01", "CE1.06"],
         level: "Professionnel",
         justification:
-          "Vous avez conçu une architecture logicielle permettant d'intégrer efficacement des modèles d'intelligence artificielle open source, en tenant compte des besoins spécifiques du client et en sélectionnant les technologies appropriées pour assurer l'efficacité et la fiabilité du système.",
+          "J'ai conçu une architecture logicielle permettant d'intégrer efficacement des modèles d'intelligence artificielle open source, en tenant compte des besoins spécifiques du client et en sélectionnant les technologies appropriées pour assurer l'efficacité et la fiabilité du système.",
       },
       {
         ac: "AC 31.03",
         ce: ["CE1.01", "CE3.01"],
         level: "Professionnel",
         justification:
-          "Vous avez déployé les modèles open source dans l'environnement de production du client, en assurant une intégration fluide avec les systèmes existants et en garantissant la continuité des opérations liées à l'intelligence artificielle.",
+          "J'ai déployé les modèles open source dans l'environnement de production du client, en assurant une intégration fluide avec les systèmes existants et en garantissant la continuité des opérations liées à l'intelligence artificielle.",
       },
       {
         ac: "AC 32.01",
         ce: ["CE2.01", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez optimisé l'application pour assurer un traitement rapide et précis des tâches d'intelligence artificielle, en minimisant l'utilisation des ressources et en justifiant vos choix techniques pour répondre aux exigences de performance.",
+          "J'ai optimisé l'application pour assurer un traitement rapide et précis des tâches d'intelligence artificielle, en minimisant l'utilisation des ressources et en justifiant mes choix techniques pour répondre aux exigences de performance.",
       },
       {
         ac: "AC 32.02",
         ce: ["CE2.02", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé le code existant pour identifier les inefficacités, modélisé des solutions améliorées et validé les améliorations apportées pour optimiser le processus d'intégration des modèles open source.",
+          "J'ai analysé le code existant pour identifier les inefficacités, modélisé des solutions améliorées et validé les améliorations apportées pour optimiser le processus d'intégration des modèles open source.",
       },
       {
         ac: "AC 33.01",
         ce: ["CE3.01", "CE3.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus automatisés pour le déploiement et la gestion des modèles open source, garantissant une gestion efficace et une continuité des activités sans interruption.",
+          "J'ai mis en place des processus automatisés pour le déploiement et la gestion des modèles open source, garantissant une gestion efficace et une continuité des activités sans interruption.",
       },
       {
         ac: "AC 33.03",
         ce: ["CE3.02", "CE3.03"],
         level: "Professionnel",
         justification:
-          "Vous avez implémenté des mesures de sécurité conformes aux normes pour protéger les données sensibles et assurer l'intégrité du système d'information lors de l'intégration des modèles open source.",
+          "J'ai implémenté des mesures de sécurité conformes aux normes pour protéger les données sensibles et assurer l'intégrité du système d'information lors de l'intégration des modèles open source.",
       },
       {
         ac: "AC 34.01",
         ce: ["CE4.01", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez développé des mécanismes pour capturer et stocker efficacement des volumes importants de données nécessaires à l'entraînement et à l'évaluation des modèles open source, en veillant à leur cohérence et à leur qualité pour une exploitation fiable.",
+          "J'ai développé des mécanismes pour capturer et stocker efficacement des volumes importants de données nécessaires à l'entraînement et à l'évaluation des modèles open source, en veillant à leur cohérence et à leur qualité pour une exploitation fiable.",
       },
       {
         ac: "AC 34.02",
         ce: ["CE4.02", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place des processus pour préparer et extraire les données en conformité avec les réglementations sur la protection des données personnelles, garantissant leur qualité pour une exploitation efficace dans les modèles open source.",
+          "J'ai mis en place des processus pour préparer et extraire les données en conformité avec les réglementations sur la protection des données personnelles, garantissant leur qualité pour une exploitation efficace dans les modèles open source.",
       },
       {
         ac: "AC 35.01",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez évalué les implications économiques, sociales et technologiques du remplacement des APIs d'intelligence artificielle propriétaires par des modèles open source, en veillant à une gestion éthique et responsable du projet.",
+          "J'ai évalué les implications économiques, sociales et technologiques du remplacement des APIs d'intelligence artificielle propriétaires par des modèles open source, en veillant à une gestion éthique et responsable du projet.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine des modèles d'intelligence artificielle open source et partagé ces informations avec l'équipe.",
+          "J'ai mis en place une veille technologique pour suivre les évolutions pertinentes dans le domaine des modèles d'intelligence artificielle open source et partagé ces informations avec l'équipe.",
       },
     ],
   },
@@ -327,49 +327,49 @@ const projects = [
         ce: ["CE1.01", "CE1.03", "CE1.06"],
         level: "Professionnel",
         justification:
-          "Vous avez sélectionné et implémenté une architecture de réseau de neurones profonde adaptée aux besoins spécifiques du projet, en appliquant des principes algorithmiques avancés et en choisissant des ressources techniques appropriées pour assurer la performance du modèle.",
+          "J'ai sélectionné et implémenté une architecture de réseau de neurones profonde adaptée aux besoins spécifiques du projet, en appliquant des principes algorithmiques avancés et en choisissant des ressources techniques appropriées pour assurer la performance du modèle.",
       },
       {
         ac: "AC 32.01",
         ce: ["CE2.01", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez optimisé le réseau de neurones pour améliorer des métriques telles que le temps d'exécution et la précision, tout en justifiant vos choix techniques et en validant les résultats obtenus.",
+          "J'ai optimisé le réseau de neurones pour améliorer des métriques telles que le temps d'exécution et la précision, tout en justifiant mes choix techniques et en validant les résultats obtenus.",
       },
       {
         ac: "AC 32.02",
         ce: ["CE2.02", "CE2.04"],
         level: "Professionnel",
         justification:
-          "Vous avez analysé le comportement du code du réseau de neurones, identifié des points d'amélioration potentiels et modélisé des solutions pour optimiser les performances, en justifiant vos choix et en validant les résultats obtenus.",
+          "J'ai analysé le comportement du code du réseau de neurones, identifié des points d'amélioration potentiels et modélisé des solutions pour optimiser les performances, en justifiant mes choix et en validant les résultats obtenus.",
       },
       {
         ac: "AC 34.03",
         ce: ["CE4.03", "CE4.05"],
         level: "Professionnel",
         justification:
-          "Vous avez appliqué des techniques d'apprentissage automatique pour entraîner le réseau de neurones, en vous basant sur des fondements mathématiques solides et en veillant à la qualité et à la cohérence des données utilisées.",
+          "J'ai appliqué des techniques d'apprentissage automatique pour entraîner le réseau de neurones, en me basant sur des fondements mathématiques solides et en veillant à la qualité et à la cohérence des données utilisées.",
       },
       {
         ac: "AC 35.01",
         ce: ["CE5.02", "CE5.03"],
         level: "Professionnel",
         justification:
-          "Vous avez évalué les implications économiques, sociétales et technologiques de l'application du réseau de neurones, en tenant compte des réglementations et en promouvant une utilisation éthique et responsable de la technologie.",
+          "J'ai évalué les implications économiques, sociétales et technologiques de l'application du réseau de neurones, en tenant compte des réglementations et en promouvant une utilisation éthique et responsable de la technologie.",
       },
       {
         ac: "AC 36.01",
         ce: ["CE5.04", "CE6.04"],
         level: "Professionnel",
         justification:
-          "Vous avez effectué une veille technologique sur les avancées en matière de réseaux de neurones, partagé ces informations avec votre équipe et intégré de nouvelles approches créatives dans le projet.",
+          "J'ai effectué une veille technologique sur les avancées en matière de réseaux de neurones, partagé ces informations avec mon équipe et intégré de nouvelles approches créatives dans le projet.",
       },
       {
         ac: "AC 36.04",
         ce: ["CE5.01", "CE5.04"],
         level: "Professionnel",
         justification:
-          "Vous avez participé activement à la gestion du projet, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
+          "J'ai participé activement à la gestion du projet, en communiquant efficacement avec les membres de l'équipe et en proposant des solutions innovantes aux défis rencontrés.",
       },
     ],
   },
