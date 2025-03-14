@@ -395,7 +395,6 @@ export default function Competences({ params: { locale } }) {
             shadow="xl"
             direction="column"
             gap="l"
-            background="background-overlay"
           >
             <Heading variant="display-strong-xs" align="center" color="accent-strong">
               {project.title}
@@ -413,7 +412,6 @@ export default function Competences({ params: { locale } }) {
                   padding="m"
                   shadow="m"
                   direction="column"
-                  background="background-alt"
                 >
                   <Heading variant="heading-strong-s" color="accent-strong">
                     {competence.ac}
