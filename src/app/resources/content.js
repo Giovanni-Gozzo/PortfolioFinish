@@ -232,7 +232,7 @@ const work = {
 }
 
 const gallery = {
-    label: 'Gallery',
+    label: 'Compétences',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
