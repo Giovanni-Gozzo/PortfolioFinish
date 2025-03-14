@@ -3,6 +3,7 @@ import { baseURL } from "@/app/resources";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
+// Génération des métadonnées de la page
 export async function generateMetadata({ params: { locale } }) {
   const t = await getTranslations();
   const title = "Compétences - Portfolio";
@@ -28,6 +29,60 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
+// Objet associant chaque CE à sa description (titre)
+const ceDescriptions = {
+  "CE1.01": "en respectant les besoins décrits par le client",
+  "CE1.03": "en appliquant les principes algorithmiques",
+  "CE1.04": "en veillant à la qualité du code et à sa documentation",
+  "CE1.06": "en choisissant les ressources techniques appropriées",
+  "CE2.01": "en formalisant et modélisant des situations complexes",
+  "CE2.02": "en recensant les algorithmes et les structures de données usuels",
+  "CE2.03": "en s’appuyant sur des schémas de raisonnement",
+  "CE2.04": "en justifiant les choix et validant les résultats",
+  "CE3.01": "en sécurisant le système d’information",
+  "CE3.03": "en appliquant les normes en vigueur et les bonnes pratiques architecturales et de sécurité",
+  "CE3.02": "en offrant une qualité de service optimale",
+  "CE3.04": "en assurant la continuité d'activité",
+  "CE4.01": "en respectant les réglementations sur le respect de la vie privée et la protection des données personnelles",
+  "CE4.02": "en respectant les enjeux économiques, sociétaux et écologiques de l’utilisation du stockage de données, ainsi que les différentes infrastructures (data centers, cloud, etc.)",
+  "CE4.03": "en s’appuyant sur des bases mathématiques",
+  "CE4.05": "en assurant la cohérence et la qualité",
+  "CE5.04": "en adoptant une démarche proactive, créative et critique",
+  "CE5.02": "en respectant les règles juridiques et les normes en vigueur",
+  "CE5.01": "en communiquant efficacement avec les différents acteurs d’un projet",
+  "CE5.03": "en sensibilisant à une gestion éthique, responsable, durable et interculturelle",
+  "CE6.01": "en inscrivant sa démarche au sein d’une équipe pluridisciplinaire",
+  "CE6.02": "en accompagnant la mise en œuvre des évolutions informatiques",
+  "CE6.03": "en veillant au respect des contraintes juridiques",
+  "CE6.04": "en développant une communication efficace et collaborative"
+};
+
+// Objet associant chaque AC à son intitulé
+const acDescriptions = {
+  "AC 31.01": "Choisir et implémenter les architectures adaptées",
+  "AC 31.02": "Faire évoluer une application existante",
+  "AC 31.03": "Intégrer des solutions dans un environnement de production",
+  "AC 32.01": "Anticiper les résultats de diverses métriques (temps d'exécution, occupation mémoire, montée en charge...)",
+  "AC 32.02": "Profiler, analyser et justifier le comportement d'un code existant",
+  "AC 32.03": "Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application (imagerie, immersion, intelligence artificielle, jeux vidéos, parallélisme, calcul formel...)",
+  "AC 33.01": "Créer des processus de traitement automatisé (solution de gestion de configuration et de parc, intégration et déploiement continu...)",
+  "AC 33.02": "Configurer un serveur et des services réseaux de manière avancée (virtualisation...)",
+  "AC 33.03": "Appliquer une politique de sécurité au niveau de l'infrastructure",
+  "AC 33.04": "Déployer et maintenir un réseau d'organisation en fonction de ses besoins",
+  "AC 34.01": "Capturer et stocker des ensembles volumineux et complexes de données hétérogènes",
+  "AC 34.02": "Préparer et extraire les données pour l'exploitation",
+  "AC 34.03": "Appliquer des méthodes d'exploration et d'exploitation des données (apprentissage, informatique décisionnelle ou fouille de données)",
+  "AC 34.04": "Mettre en production et optimiser le système de gestion de données de l'entreprise",
+  "AC 35.01": "Mesurer les impacts économiques, sociétaux et technologiques d'un projet informatique",
+  "AC 35.02": "Savoir intégrer un projet informatique dans le système d'information d'une organisation",
+  "AC 35.03": "Savoir adapter un système d'information",
+  "AC 36.01": "Organiser et partager une veille technologique et informationnelle",
+  "AC 36.02": "Identifier les enjeux de l'économie de l'innovation numérique",
+  "AC 36.03": "Guider la conduite du changement informatique au sein d'une organisation",
+  "AC 36.04": "Accompagner le management de projet informatique"
+};
+
+// Définition des projets avec leurs compétences et justifications à la première personne
 const projects = [
   {
     title: "Plateforme de Recherche de Stages et d'Alternances",
@@ -53,7 +108,7 @@ const projects = [
         ce: ["CE2.01", "CE2.04"],
         level: "Professionnel",
         justification:
-          "J'ai optimisé la plateforme en tenant compte des performances, de la consommation de ressources et de la capacité à gérer une augmentation du nombre d'utilisateurs, en justifiant mes choix techniques.",
+          "J'ai optimisé la plateforme en tenant compte des performances, de la consommation des ressources et de la capacité à gérer une augmentation du nombre d'utilisateurs, en justifiant mes choix techniques.",
       },
       {
         ac: "AC 32.02",
@@ -402,8 +457,7 @@ export default function Competences({ params: { locale } }) {
             <Flex direction="column" align="center">
               <p>{project.description}</p>
             </Flex>
-            <Flex wrap="wrap" gap="m">
-              {project.competences.map((competence, idx) => (
+<Flex wrap={true} gap="m">              {project.competences.map((competence, idx) => (
                 <Flex
                   key={idx}
                   border="neutral-medium"
@@ -414,11 +468,18 @@ export default function Competences({ params: { locale } }) {
                   direction="column"
                 >
                   <Heading variant="heading-strong-s" color="accent-strong">
-                    {competence.ac}
+                    {competence.ac} - {acDescriptions[competence.ac] || ""}
                   </Heading>
-                  <p>
-                    Compétences Élémentaires : {competence.ce.join(", ")}
-                  </p>
+                  <div>
+                    <p>Compétences Élémentaires :</p>
+                    <ul>
+                      {competence.ce.map((code) => (
+                        <li key={code}>
+                          {code} - {ceDescriptions[code]}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <p>
                     <strong>Niveau :</strong> {competence.level}
                   </p>
